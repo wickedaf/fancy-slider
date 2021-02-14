@@ -21,7 +21,7 @@ const showImages = (images) => {
   console.log(images, images.length)
   if(images.length == 0 ){
     notFound.innerHTML = `<h1 class="text-center">Sorry!!! No Images found for this Query ☹</h1>`;
-    document.getElementById("display-images").innerHTML = "";
+    document.getElementById("display-images").style.display = "none";
   }else{
     imagesArea.style.display = 'block';
     gallery.innerHTML = '';
@@ -144,7 +144,7 @@ document.getElementById("search").addEventListener("keypress", e =>{
 })
 
 searchBtn.addEventListener('click', function () {
-  document.querySelector('.main').style.display = 'none';
+  document.getElementById("display-images").style.display = "block";
   notFound.innerHTML = " ";
   spinner.classList.remove("d-none");
   clearInterval(timer);
