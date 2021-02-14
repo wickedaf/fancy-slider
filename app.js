@@ -21,6 +21,7 @@ const showImages = (images) => {
   console.log(images, images.length)
   if(images.length == 0 ){
     notFound.innerHTML = `<h1 class="text-center">Sorry!!! No Images found for this Query ☹</h1>`;
+    document.getElementById("display-images").innerHTML = "";
   }else{
     imagesArea.style.display = 'block';
     gallery.innerHTML = '';
